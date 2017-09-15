@@ -12,8 +12,9 @@ class StorePicker extends React.Component {
   	event.preventDefault();
   	console.log('Patatafrito');
   	//First grab the text from the box
-  	console.log(this.storeInput.value);
+  	const storeId = this.storeInput.value;
   	//Second we're going to transition from / to /store/:storeiId
+    this.context.router.transitionTo(`/store/${storeId}`)
   }
 
   render() {
@@ -26,6 +27,10 @@ class StorePicker extends React.Component {
       </form>
     )
   }
+}
+
+StorePicker.contextTypes = {
+  router: React.PropTypes.object
 }
 
 export default StorePicker;
