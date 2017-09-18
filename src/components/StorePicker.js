@@ -10,7 +10,6 @@ class StorePicker extends React.Component {
 
   goToStore(event) {
   	event.preventDefault();
-  	console.log('Patatafrito');
   	//First grab the text from the box
   	const storeId = this.storeInput.value;
   	//Second we're going to transition from / to /store/:storeiId
