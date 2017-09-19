@@ -1,6 +1,8 @@
 import React from 'react';
 import AddFishForm from './AddFishForm'
 
+
+
 class Inventory extends React.Component {
   constructor() {
     super();
@@ -32,6 +34,7 @@ class Inventory extends React.Component {
 
         <textarea type="text" name="desc" value={fish.desc} placeholder="Fish Desc" onChange={(e) => this.handleChange(e, key)}></textarea>
         <input type="text" name="image" value={fish.image} placeholder="Fish Image" onChange={(e) => this.handleChange(e, key)}/>
+        <button onClick={() => this.props.removeFish(key)}>Remove Fish</button>
       </div>
     )
   }
